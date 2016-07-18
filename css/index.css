@@ -164,13 +164,13 @@
     padding-top: 30px;
   }
   .show-box .right-content .list .imgBox {
-    width: 45%;
+    width: 40%;
   }
   .show-box .right-content .list .imgBox img {
     width: 100%;
   }
   .show-box .right-content .list .right-box {
-    width: 50%;
+    width: 55%;
     margin-left: 3%;
   }
   .show-box .right-content .list .right-box h4 {
@@ -200,7 +200,7 @@
   .more a {
     display: inline-block;
     float: left;
-    width: 42%;
+    width: 47%;
     margin-right: 5%;
   }
   .more a .showmore {
