@@ -203,6 +203,9 @@
     width: 47%;
     margin-right: 3%;
   }
+  .more a:nth-child(2){
+    margin-right: 0;
+  }
   .more a .showmore {
     height: 100%;
   }
