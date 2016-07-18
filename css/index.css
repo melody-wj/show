@@ -12,8 +12,6 @@
   box-sizing: border-box;
 }
 .show-box .left-nav .img-box {
-  border-right: 1px solid #b9b9b9;
-  border-bottom: 1px solid #b9b9b9;
   position: relative;
   box-sizing: border-box;
   cursor: pointer;
@@ -54,6 +52,8 @@
   }
   .show-box .left-nav .img-box {
     padding: 30px 30px 10px 25px;
+    border-right: 1px solid #b9b9b9;
+    border-bottom: 1px solid #b9b9b9;
   }
   .show-box .left-nav .img-box:nth-child(2) {
     border-right: 0;
@@ -137,6 +137,7 @@
   .img-box {
     width: 45%;
     border-top: 1px solid #b9b9b9;
+    border-left:1px solid #b9b9b9;
     box-sizing: border-box;
   }
   .img-box img {
