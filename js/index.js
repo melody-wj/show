@@ -12,6 +12,7 @@ window.onload=function(){
             for(var i=0;i<list.length;i++){
                 imb[i].index=i;
                 imb[1].style.borderBottom="1px solid #b9b9b9";
+                imb[0].style.borderRight=0;
                 imb[0].style.borderBottom="1px solid #b9b9b9";
                 imb[i].onclick=function(){
                     for(var j=0;j<list.length;j++){
