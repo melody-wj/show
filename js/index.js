@@ -29,6 +29,7 @@ window.onload=function(){
                 imb[i].index=i;
                 imb[0].style.borderBottom=0;
                 imb[1].style.borderRight="1px solid #b9b9b9";
+                imb[1].style.borderBottom="1px solid #b9b9b9";
                 imb[i].onclick=function(){
                     for(var j=0;j<list.length;j++){
                         list[j].style.display="none";
