@@ -1,0 +1,99 @@
+@import "var";
+*{
+  box-sizing:border-box;
+}
+.padding(){
+  padding-left:@padding;
+  padding-right:@padding;
+}
+.center(){
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+.container{
+  &{
+    display:block;
+    .padding;
+    .center;
+  }
+  &-fulid{
+    .padding;
+    display:block;
+  }
+}
+.row{
+  &{
+    display:block;
+    margin-left:-@padding;
+    margin-right:-@padding;
+  }
+  &:after{
+    content:'';
+    display: block;
+    height:0;
+    line-height:0;
+    clear:both;
+  }
+}
+[class*=col-]{
+  display:block;
+  float:left;
+  .padding;
+}
+.col(@type,@r:1) when (@r<=@col){
+  .col-@{type}-@{r}{
+    width:100% / @col*@r;
+  }
+  .col(@type,@r+1);
+}
+.col(xs);
+.grid(@type,@screenwidth){
+  @media screen and (min-width:@screenwidth){
+    .container{
+      width:@screenwidth - @padding*2;
+    }
+    .col(@type)
+  }
+}
+.grid(sm,@smScreen);
+.grid(md,@mdScreen);
+.grid(lg,@lgScreen);
+@media screen and (max-width:@smScreen){
+  .hidden-xs{
+    display: none!important;
+  }
+}
+@media screen and (max-width:@mdScreen) and (min-width:@smScreen){
+  .hidden-sm{
+    display: none!important;
+  }
+}
+@media screen and (max-width:@lgScreen) and (min-width:@mdScreen){
+  .hidden-md{
+    display: none!important;
+  }
+}
+@media screen and (min-width:@lgScreen){
+  .hidden-lg{
+    display: none!important;
+  }
+}
+[img-response]{
+  max-width: 100%;
+  display: block;
+}
+[center-block]{
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+}
+[center-text]{
+  text-align:center;
+}
+.clf:after{
+  content:"";
+  display: block;
+  line-height:0;
+  height:0;
+  clear:both;
+}
